@@ -15,6 +15,7 @@ public class Hero {
         mSpecialPower = specialPower;
         mWeakness = weakness;
         heroInstances.add(this);
+        mId = heroInstances.size();
     }
 
     public String getheroName() {
@@ -35,5 +36,13 @@ public class Hero {
 
     public static List<Hero> getAll() {
         return heroInstances;
+    }
+
+    public static void clear(){
+    heroInstances.clear();
+    }
+
+    public int getmId(){
+    return mId;
     }
 }
