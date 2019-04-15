@@ -18,4 +18,8 @@ public class Hero {
     public int getheroAge(){
     return mHeroAge;
     }
+
+    public String getspecialPower(){
+    return mSpecialPower;
+    }
 }
