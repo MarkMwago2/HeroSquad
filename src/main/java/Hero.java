@@ -14,4 +14,8 @@ public class Hero {
     public String getheroName(){
     return mHeroName;
     }
+
+    public int getheroAge(){
+    return mHeroAge;
+    }
 }
