@@ -1,7 +1,11 @@
 public class Hero {
+    private String mHeroName;
 
-    public Hero(String description) {
+    public Hero(String HeroName) {
 
     }
 
+    public String getHeroName() {
+        return mHeroName;
+    }
 }
