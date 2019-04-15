@@ -7,9 +7,26 @@ public class Squad {
     private String mSquadCause;
 
     public Squad(String squadName, int squadSize, String squadCause ){
+        mSquadName = squadName;
+        mSquadsize = squadSize;
+        mSquadCause = squadCause;
 
     }
+    public String getsquadName(){
+        return mSquadName;
+    }
+
+    public int getsquadSize(){
+    return mSquadsize;
+
+    }
+
+    public String getsquadCause(){
+    return mSquadCause;
+    }
 }
+
+
 
 
 
