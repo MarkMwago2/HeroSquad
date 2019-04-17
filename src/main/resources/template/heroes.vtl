@@ -13,14 +13,14 @@
     #if ($heroes)
     #foreach ($hero in $heroes)
     <tr>
-        <th scope="row"> $hero.getId() </th>
+        <th scope="row"> $hero.getmId()</th>
 
     </td>
 
-    <td>	<a href="/Hero/$Hero.getId()">$hero.getNewName()</a> </td>
-    <td>$hero.getNewAge()</td>
-    <td>$hero.getNewSpecialPowers()</td>
-    <td>$hero.getNewWeakness()</td>
+    <td>	<a href="/Hero/$Hero.getId()">$hero.getheroName()</a> </td>
+    <td>$hero.getheroAge()</td>
+    <td>$hero.getspecialPower()</td>
+    <td>$hero.getweakness()</td>
     <td>none</td>
     </tr>
     #end
