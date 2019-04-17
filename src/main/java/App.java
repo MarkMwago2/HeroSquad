@@ -18,6 +18,9 @@ public class App {
             port = Integer.parseInt(process.environment().get("PORT"));
         } else {
             port = 4567;
+        }
+
+        port(port);
 
             get("/", (request, response) -> {
                 Map<String, Object> model = new HashMap<String, Object>();
