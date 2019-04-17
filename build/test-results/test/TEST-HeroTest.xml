@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="HeroTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2019-04-17T06:53:50" hostname="mark-HP-Laptop-15-bs1xx" time="0.007">
+  <properties/>
+  <testcase name="Hero_instantiatesWithHeroAge_int" classname="HeroTest" time="0.004"/>
+  <testcase name="Hero_instantiatesWithWeakness_String" classname="HeroTest" time="0.0"/>
+  <testcase name="Hero_instantiatesWithHeroName_String" classname="HeroTest" time="0.001"/>
+  <testcase name="Hero_instantiatesCorrectly_true" classname="HeroTest" time="0.0"/>
+  <testcase name="clear_clearsAllHerosinArray_0" classname="HeroTest" time="0.0"/>
+  <testcase name="getId_HeroInstantiatiateswithId_2" classname="HeroTest" time="0.0"/>
+  <testcase name="getAll_returnAllinstancesofHeroObject_true" classname="HeroTest" time="0.0"/>
+  <testcase name="Hero_instantiatesWithspecialPower_String" classname="HeroTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

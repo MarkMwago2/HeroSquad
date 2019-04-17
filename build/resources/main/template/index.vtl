@@ -1,54 +1,10 @@
-<div class="container">
-    <div class="row">
-        <div class="col-sm">
-        </div>
-        <div class="col-sm">
-            <a href="/add-form"><button type="submit" class="btn btn-default btn-lg">Add Squad</button></a>
-        </div>
-        <div class="col-sm">
-        </div>
-    </div>
-</div>
+<h1>HERO list!</h1>
 
-<br>
+<p>Create a hero squad:</p>
 
-#foreach ($Squad in $mySquad)
+<form action="/tasks" method="post">
+<label for="description">Hero Description</label>
+<input id="description" name="description" type="text">
 
-<div class="container squad">
-    <div class="row">
-        <div class="col-sm">
-            <h3>$mSquadName to $mSquadCause</h3>
-        </div>
-        <div class="col-sm">
-            <a href="/add-hero-form"><button type="submit" class="btn btn-default btn-lg">Add Hero</button></a>
-        </div>
-        <div class="col-sm">
-            <a href="/add-form"><button type="submit" class="btn btn-default btn-lg">Edit Name</button></a>
-        </div>
-    </div>
-<!--    <div class="row">-->
-<!--        <div class="col-sm">-->
-<!--            <table class="table">-->
-<!--                <thead>-->
-<!--                <tr>-->
-<!--                    <th scope="col">Name</th>-->
-<!--                    <th scope="col">Size</th>-->
-<!--                    <th scope="col">SquadCause</th>-->
-
-
-<!--                </tr>-->
-<!--                </thead>-->
-<!--                <tbody>-->
-<!--                #foreach($hero in $myHero)-->
-<!--                <tr>-->
-<!--                    <td>$hero.Name</td>-->
-<!--                    <td>$hero.Age</td>-->
-<!--                    <td>$hero.specialPower</td>-->
-<!--                    <td>$hero.Weakness</td>-->
-
-<!--                </tr>-->
-<!--                #end-->
-<!--                </tbody>-->
-<!--            </table>-->
-<!--        </div>-->
-<!--    </div>-->
+<button type="submit" class="btn btn-default">Add Hero</button>
+</form>

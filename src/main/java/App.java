@@ -9,6 +9,7 @@ public class App {
     public static void main(String[] args) {
         staticFileLocation("/public");
         String layout = "template/layout.vtl";
+        staticFileLocation("/public");
 
         ProcessBuilder process = new ProcessBuilder();
         Integer port;
