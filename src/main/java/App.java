@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
 import spark.ModelAndView;
@@ -20,10 +21,51 @@ public class App {
 
             get("/", (request, response) -> {
                 Map<String, Object> model = new HashMap<String, Object>();
-                model.put("template", "template/index.vtl");
+                ArrayList<Hero> Hero=request.session().attribute("heroes");
+                model.put("heroes", Hero);
+                model.put("template", "template/newhwero.vtl");
                 return new ModelAndView(model, layout);
-            }, new VelocityTemplateEngine());
+            },  new VelocityTemplateEngine());
+
+            post("/heroes",(request,response)->{
+                Map <String,Object> model = new HashMap<String,Object>();
+                ArrayList<Hero> heroes=request.session().attribute("heroes");
+                String name =request.queryParams("name");
+                int age = Integer.parseInt(request.queryParams("age"));
+                String specialPowers =request.queryParams("specialPowers");
+                String weakness =request.queryParams("weakness");
+                Hero newHero = new Hero(name,age,specialPowers,weakness);
+                model.put("template","template/success.vtl");
+                return new ModelAndView(model,layout);
+            },new VelocityTemplateEngine());
+
+            get("/heroes",(request,response)->{
+                Map <String,Object> model = new HashMap<String,Object>();
+                model.put("heroes",Hero.getAll());
+                model.put("template","template/heroes.vtl");
+                return new ModelAndView(model,layout);
+            },new VelocityTemplateEngine());
+
+            get("/hero/:id",(request,response)->{
+                Map<String,Object>	model = new HashMap<>();
+                String id = request.session().attribute(":id");
+                 Hero hero = Hero.find(Integer.parseInt(id));
+
+               // model.put("heroes",request.session().attributes());
+                model.put("hero",hero);
+                model.put("template","template/hero.vtl");
+                return new ModelAndView(model,layout);
+            },new VelocityTemplateEngine());
+
+            get("/addsquad",(request,response)->{
+                Map <String,Object> model = new HashMap<String,Object>();
+                model.put("heroes",Hero.getAll());
+                model.put("template","templates/addsquad.vtl");
+                return new ModelAndView(model,layout);
+            },new VelocityTemplateEngine());
+
         }
     }
 }
+
 

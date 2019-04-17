@@ -56,7 +56,7 @@ public class HeroTest {
     }
 
     @Test
-    public void getId_HeroInstantiatiateswithId_2(){
+    public void getId_HeroInstantiatiateswithId_1(){
     Hero.clear();
     Hero myHero = new Hero ("Supersub", 9, "swords", "naughty");
     assertEquals(1, myHero.getmId());
