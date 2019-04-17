@@ -1,5 +1,5 @@
 <h3>Heroes List</h3>
-        #if ($heroes)
+        #if ($Hero)
 <ul>
 #foreach ($hero in $heroes)
 <li>$hero.getHeroName()</li>
@@ -9,4 +9,4 @@
         #else
 <h3>No Heroes yet!</h3>
         #end
-<button><a href="/heroes/new">Add New Task</a><button>
+<button><a href="/Hero/new">Add New Task</a><button>

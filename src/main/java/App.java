@@ -10,32 +10,19 @@ public class App {
         staticFileLocation("/public");
         String layout = "template/layout.vtl";
 
-        get("/",(request,response)->{
-            Map<String, Object> model = new HashMap<String, Object>();
-            model.put("template", "template/index.vtl");
-            return new ModelAndView(model, layout);
-        }, new VelocityTemplateEngine());
+        ProcessBuilder process = new ProcessBuilder();
+        Integer port;
+        if (process.environment().get("PORT") != null) {
+            port = Integer.parseInt(process.environment().get("PORT"));
+        } else {
+            port = 6745;
 
-        get("/heroes/new",(request, response) ->{
-            Map<String, Object> model = new HashMap<String, Object>();
-            model.put("template", "template/heroform.vtl");
-            return new ModelAndView(model, layout);
-        }, new VelocityTemplateEngine());
-        get("/heroes",(request,response)->{
-            Map<String, Object> model = new HashMap<String, Object>();
-            model.put("heroes", Hero.getAll());
-            model.put("template", "template/heroList.vtl");
-            return new ModelAndView(model, layout);
-        }, new VelocityTemplateEngine());
-        post("/heroes", (request, response) ->{
-            Map<String, Object> model = new HashMap<String, Object>();
-            String name = request.queryParams("name");
-            int age = Integer.parseInt(request.queryParams("age"));
-            String strength = request.queryParams("strength");
-            String weakness = request.queryParams("weak");
-            Hero newHero = new Hero(name, age, strength,weakness);
-            model.put("template", "template/success.vtl");
-            return new ModelAndView(model, layout);
-        }, new VelocityTemplateEngine());
+            get("/", (request, response) -> {
+                Map<String, Object> model = new HashMap<String, Object>();
+                model.put("template", "template/index.vtl");
+                return new ModelAndView(model, layout);
+            }, new VelocityTemplateEngine());
+        }
     }
 }
+
