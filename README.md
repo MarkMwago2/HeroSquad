@@ -1,3 +1,5 @@
+**HERO SQUAD**
+
 **APP DESCRIPTION**
 
 This is a spark based app that enables users to recruit a team of heroes fighting for a cause.
@@ -5,6 +7,7 @@ This is a spark based app that enables users to recruit a team of heroes fightin
 **CONTRIBUTORS**
 
 This app was developed by Mark Mwago
+
 
 **TECHNOLOGIES USED**
 
@@ -16,6 +19,7 @@ JUnit 4
 
 Gradle 4.10
 
+
 **BDD**
 
 | Input                                             | Behaviour                                    | Output                                                        |
@@ -26,7 +30,7 @@ Gradle 4.10
 
 **KNOWN BUGS**
 
-`You cannot yet give a name to your squad`
+You cannot yet give a name to your squad`
 
 **USAGE**
 
@@ -40,3 +44,4 @@ You can contact me on markmwago@gmail.com
 **LICENSE**
 
 `MIT LICENSE`
+
